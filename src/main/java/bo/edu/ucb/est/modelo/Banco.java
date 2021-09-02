@@ -7,6 +7,7 @@ package bo.edu.ucb.est.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
+import bo.edu.ucb.est.interfaz.Bienvenido;
 /**
  *
  * @author ecampohermoso
@@ -14,6 +15,7 @@ import java.util.List;
 public class Banco {
     private String nombre;
     private List<Cliente> clientes;
+    Bienvenido uno=new Bienvenido();
     
     public Banco(String nombre) {
         this.nombre = nombre;
@@ -39,10 +41,13 @@ public class Banco {
     public Cliente buscarClientePorCodigo(String codigoCliente, String pin) {
         for ( int i = 0; i < clientes.size(); i++) {
             Cliente cli = clientes.get(i); // Sacando elemento por elemento
+            //System.out.println(cli.getCodigoCliente() + codigoCliente);
+            //System.out.println(cli.getPinSeguridad() + pin);
             if (cli.getCodigoCliente().equals(codigoCliente) && cli.getPinSeguridad().equals(pin)) {
                 return cli;
             }
         }
+        uno.CredencialesIncorrectas();
         return null;
     }
 }
