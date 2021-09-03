@@ -5,6 +5,7 @@
  */
 package bo.edu.ucb.est.modelo;
 
+import bo.edu.ucb.est.interfaz.Bienvenido;
 /**
  *
  * @author ecampohermoso
@@ -14,14 +15,26 @@ public class Cuenta {
     private String moneda;
     private String tipo;
     private double saldo;
-
+    Bienvenido uno=new Bienvenido();
     public Cuenta(int Codigo,String moneda, String tipo, double saldoInicial) {
         this.Codigo=Codigo;
         this.moneda = moneda;
         this.tipo = tipo;
         this.saldo = saldoInicial;
     }
-
+    public void Mostrar(int i){
+        System.out.print(i);
+        System.out.print(". Cuentas ");
+        System.out.print(Codigo);
+        System.out.println(" " + tipo + " (" + moneda+ ")");
+    }
+    public void MostrarTodo(int i){
+        System.out.print("Información de la cuenta:\n\n"+ "Cuenta ");
+        System.out.println(Codigo);
+        System.out.print(tipo + "\nSaldo: ");
+        System.out.print(saldo);
+        System.out.println(" " + moneda + "\n");
+    }
     public boolean retirar(double monto) {
         boolean resultado = false;
         if (monto > 0 && monto <= saldo) { // verifica que no sea negativo, cero o exceda su saldo

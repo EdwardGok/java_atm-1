@@ -37,8 +37,12 @@ public class App
         bisa.agregarCliente(cgomez);
         
         Cajero obrajes = new Cajero(bisa);
-        obrajes.MostrarBienvenida();
-        
+        int n=1;
+        while(n==1)
+        {
+            obrajes.MostrarBienvenida();
+            obrajes.MenuPrincipal();
+        } 
     }
 
 }

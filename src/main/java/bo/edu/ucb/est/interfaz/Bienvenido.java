@@ -5,11 +5,14 @@
  */
 package bo.edu.ucb.est.interfaz;
 
+
+
 /**
  *
  * @author HP
  */
 public class Bienvenido {
+
     public void Bienvenido(){
         System.out.println("Bienvenido al BANCO BISA\n\nIngrese su codigo de cliente: ");
     }
@@ -19,10 +22,27 @@ public class Bienvenido {
     public void CredencialesIncorrectas(){
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("\nCredenciales Incorrectas\nIntentelo de nuevo");
+        System.out.println("\nCredenciales Incorrectas\nIntentelo de nuevo\n");
     }
     public void Linea(){
         System.out.println("**********************");
     }
-    
+    public void Menu(){
+        System.out.println("Bienvenido al BANCO BISA\n\nElija una opción:\n\n1.Ver Saldo.\n2.Retirar dinero.\n3.Depositar dinero.\n4.Salir.\n");
+    }
+    public void Opcion(){
+        System.out.println("Eliga una opción: ");
+    }
+    public void error(){
+        System.out.println("Error");
+    }
+    public void retirar(){
+        System.out.println("Ingrese la cantidad a retirar: ");
+    }
+    public void depositar(){
+        System.out.println("Ingrese la cantidad a depositar: ");
+    }
+    public void Exito(){
+        System.out.println("Operación exitosa");
+    }
 }
