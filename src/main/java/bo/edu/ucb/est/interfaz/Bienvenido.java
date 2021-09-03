@@ -31,7 +31,7 @@ public class Bienvenido {
         System.out.println("Bienvenido al BANCO BISA\n\nElija una opción:\n\n1.Ver Saldo.\n2.Retirar dinero.\n3.Depositar dinero.\n4.Salir.\n");
     }
     public void Opcion(){
-        System.out.println("Eliga una opción: ");
+        System.out.println("Elija una opción: ");
     }
     public void error(){
         System.out.println("Error");
